@@ -2,11 +2,11 @@ const express = require("express")
 const mongoose = require("mongoose")
 const bcrypt = require("bcrypt")
 const cors = require("cors") 
-const Port = process.env.PORT || 3000;
+const Port = process.env.PORT || 3000
 const app = express()
-const dbURI = process.env.MONGO_URI; 
+const dbURI = process.env.MONGO_URI
 const User = require("./user")
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 require('dotenv').config();
 app.use(express.json())
 app.use(cors())  
