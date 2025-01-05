@@ -8,8 +8,6 @@ const dbURI = process.env.MONGO_URI;
 const User = require("./user")
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-
-
 app.use(express.json())
 app.use(cors())  
 
