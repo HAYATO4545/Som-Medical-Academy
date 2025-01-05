@@ -1,0 +1,988 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", serif;
+    scroll-behavior: smooth;
+    
+}
+
+:root{
+    --main-color:#ffea01;
+}
+
+body{
+    background-color: #222;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid;
+    border-bottom-color: #dcdcdc;
+
+}
+
+.payment{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #03030357;
+    z-index: 999999;
+    display: none;
+    button{
+        width: 200px;
+        height: 40px;
+        background-color: var(--main-color);
+        border: none;
+        font-size: 20px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.162);
+    }
+}
+
+.stage1{
+    width: 500px;
+    max-width: 95%;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    gap: 20px;
+ 
+}
+
+.stage3{
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    font-size:15px;
+    border-radius: 10px;
+    display: none;
+
+    h1{
+        width: 95%;
+    }
+    #targetNumber{
+        color: var(--main-color);
+    }
+
+    #usernumber{
+        color: var(--main-color);
+    }
+}
+
+.stage2-evc{
+    width: max-content;
+    max-width: 100%;
+    flex-wrap: wrap;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    gap: 20px;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+  display: none;
+  img{
+    width: 50px;
+}
+    button{
+        a{
+            text-decoration: none;
+            color: #222;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.hidePay{
+    width: 100%;
+  text-align: center;
+}
+
+
+.bx-x{
+    font-size: 30px;
+    color: var(--main-color);
+    background-color: #111;
+    padding: 10px;
+    border-radius: 10px;
+}
+.stage2-edahab{
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    gap: 20px;
+    font-size: 10px;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  display: none;
+  img{
+    width: 50px;
+}
+    button{
+        a{
+            text-decoration: none;
+            color: #222;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+#oldPrice{
+    text-decoration: line-through;
+    color: #cacaca;
+}
+#newPrice{
+    color: var(--main-color);
+}
+.cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    width: 300px;
+    height: 200px;
+    background-color: #111;
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 200px;
+        height: 100px;
+    }
+    button{
+        width: 80%;
+        font-size: 20px;
+        background-color: #e9e9e9;
+        font-weight: 500;
+    }
+}
+
+.menue{
+    display: none;
+}
+
+@keyframes down{
+    0%{
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+
+    }
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    animation: down 1S ;
+    transition: 0.3s ease-in-out;
+    img{
+        width: 80px;
+    }
+    font-size: 10px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    animation: down 1S ;
+    transition: 0.3s ease-in-out;
+    li{
+        transition: 0.3s ease-in-out;
+
+    }
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 23px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+ header ul li:hover{
+transform: translateY(-5px);
+a{
+    color: var(--main-color);
+}
+}
+
+::-webkit-scrollbar{
+    background-color: #222;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.Auth{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 30px;
+    animation: down 1S ;
+    transition: 0.3s ease-in-out;
+}
+
+.Auth button{
+    background: var(--main-color);
+    width: 85px;
+    height: 35px;
+    min-width: 70px;
+    max-width: 70px;
+    border: none;
+    border-radius: 10px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     transition: 0.3s ease-in-out;
+}
+
+
+.Auth button:hover{
+    background-color: var(--main-color) ;
+}
+
+.isAuth{
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* CSS للأجهزة اللوحية في الوضع الأفقي */
+    ul{
+        display: none;
+    }
+  }
+
+  @media (max-width: 320px) {
+    /* CSS لهواتف صغيرة جدًا مثل iPhone SE */
+    ul{
+        display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* CSS للأجهزة الأكبر حجمًا مثل بعض الهواتف الكبيرة */
+    header{
+        width: 100%;
+    }
+    ul{
+        display: none;
+    }
+.Auth{
+    margin-right: 120px;
+}
+    .menue{
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+        animation: down 1S;
+        color: var(--main-color);
+        position: fixed;
+        right: 0px;
+        top: 20px;
+        z-index: 99;
+    }
+
+    .Logo{
+        h1{
+            display: none;
+        }
+    }
+
+    .na {
+        display: none;
+        z-index: 9;
+        position: fixed;
+        animation: none;
+        right: 10px;
+        top: 60px;
+        background-color: #1b1b1bc2;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+       li a{
+        color: var(--main-color);
+       }
+    }
+    
+    .na.show {
+        display: block;
+    }
+
+  }
+  
+
+  main{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   background-color: #f8f9fa;
+}
+
+
+.Left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    gap:30px;
+    margin-left: 50px;
+  
+}
+
+.text{
+    color: #333;
+    h1{
+        font-size: 60px;
+    line-height: 50px;
+   animation: Textan 1s ease-in-out;
+    }
+    h2{
+        font-size: 40px;
+        color: #333;
+        animation: Textan 1s ease-in-out;
+
+    }
+
+    p{
+        font-size: 25px;
+        font-weight: 400px;
+        animation: Textan 1s ease-in-out;
+    }
+}
+
+.Right{
+    width: 40%;
+    height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    img{
+        margin-bottom: 170px;
+        width: 600px;
+        animation: img 10s infinite;
+        transition: 0.3s ease-in-out;
+
+    }
+}
+
+.social-icons{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: #333;
+    animation: up 1s ease-in-out;
+
+
+}
+
+.icon{
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+.icon:hover{
+    background: #fff988;
+   transform: scale(1.1);
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    animation: up 1s ease-in-out;
+}
+
+ .btn1, .btn2{
+    padding: 10px 25px;
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.3s ease-in-out;
+    a{
+        text-decoration: none;
+        color: #222;
+
+    }
+ }
+
+ .social-icons i:hover{
+    transform: scale(1.1);
+ }
+
+ .btn1{
+    background-color: var(--main-color);
+ }
+
+ .btn1:hover {
+    background-color:var(--main-color);
+    transform: scale(1.1);
+ }
+
+ .btn2:hover{
+    transform: scale(1.1);
+ }
+
+ @keyframes img{
+    0%{
+        transform: translateY(40px) ;
+
+    }
+    50%{
+        transform: translateY(20px) ;
+    }
+    100%{
+        transform: translateY(40px) ;
+
+
+    }
+ }
+
+ @media (max-width: 768px) {
+    /* CSS للأجهزة الأكبر حجمًا مثل بعض الهواتف الكبيرة */
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0 10px 0;
+        width: 100%;
+        /* height: 40vh; */
+    }
+
+    .Left{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+        margin: 0;
+    }
+    .text{
+        color: #333;
+        h1{
+        font-size: 40px;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+    
+        }
+        h2{
+            font-size: 40px;
+            color: #333;
+            width: 100%;
+            text-align: center;
+        }
+    
+        p{
+            font-size: 25px;
+            width: 100%;
+            text-align: center;
+            font-weight: 400px;
+        }
+    }
+
+    .social-icons{
+       display: flex;
+      justify-content: center;
+    }
+
+    .Right{
+        display: none;
+    }
+
+    .buttons{
+      justify-content: center;
+    }
+  }
+  
+
+  @keyframes Textan{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+  }
+
+  .services{
+    width: 100%;
+     height: 80px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 190px;
+}
+
+.service{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-size: 25px;
+    animation: service 2s;
+
+    i{
+        color: var(--main-color);
+        text-shadow: 0 0 20px;
+    }
+}
+
+
+@keyframes service{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@media (max-width: 768px) {
+    /* CSS للأجهزة الأكبر حجمًا مثل بعض الهواتف الكبيرة */
+
+ .services{
+    
+    all: unset;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #222;
+ }
+
+    .service{
+        font-size: 10px;
+    
+    }
+  }
+  
+
+  .inroduction{
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+}
+.title{
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.videios-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.Video1{
+
+    width: 60%;
+    margin-left: 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    gap: 10px;
+
+
+    h1{
+        color: #fff;
+    }
+
+    button{
+        width: 400px;
+        height: 40px;
+        font-size: 20px;
+        background-color: var(--main-color);
+        font-weight: 600;
+        text-shadow: 0 0 25px var(--main-color);
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+}
+
+.Allvidios-list{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    overflow-y: scroll;
+    gap: 10px;
+    padding-right: 10px;
+    margin-right: 140px;
+ 
+}
+
+.Allvidios-list::-webkit-scrollbar{
+    display: none;
+}
+.vid{
+    width: 200px;
+    border: 1px solid #444;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    background-color: #111;
+    border-radius: 20px;
+}
+
+.video-loack{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+
+}
+
+.vidicon{
+    padding: 10px;
+    background-color: #222;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.about{
+    width: 100%;
+    height: max-content;
+    background-color: #000;
+    padding: 10px 0;
+}
+
+.aboutServices{
+    width: 100%;
+    height: max-content;
+    padding: 10px 0;
+    display: flex;
+    color: #ffff    ;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.abservice{
+    width: 260px;
+    height: 260px;
+    transition: 0.3s ease-in-out;
+    background-color: #111111;
+    border: 1px  solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    text-wrap: wrap;
+
+    i{
+        color: var(--main-color);
+        font-size: 30px;
+    }
+    p{
+        color: #fff;
+    }
+}
+
+.abservice2{
+    width: 260px;
+    height: 260px;
+    background-color: var(--main-color);
+    transition: 0.3s ease-in-out;
+    color: #222;
+    border: 1px  solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    text-wrap: wrap;
+
+    i{
+     color: #222;
+     font-size: 30px;
+    }
+p{
+    color: #222;
+}
+}
+
+@media (max-width: 768px) {
+    /* CSS للأجهزة الأكبر حجمًا مثل بعض الهواتف الكبيرة */
+
+    .inroduction{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .videios-section{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+
+    }
+    .title{
+        all: unset;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 29px;
+    }
+
+    .Video1{
+        all: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+         text-align: center;        
+        video{
+            all: unset;
+            width: 100%;
+            height: 250px;
+        }
+
+        h1{
+            font-size: 25px;
+        }
+        button{
+            all: unset;
+            padding: 10px;
+            background-color: var(--main-color);
+            color: #333;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    .Allvidios-list{
+        all: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .aboutServices{
+
+        width: 100%;
+    }
+    .abservice{
+        width: 300;
+    }
+  }
+  
+
+
+
+
+
+  /* لجميع الأجهزة اللوحية */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* هنا تضع التنسيقات الخاصة بالآيباد */
+  
+    /* أنماط الأجهزة اللوحية بجميع الأوضاع */
+    header ul {
+        display: none;
+    }
+
+    .menue{
+            display: block;
+            margin-right: 20px;
+            font-size: 20px;
+            animation: down 1S;
+            color: #222;
+            z-index: 9999;
+    }
+
+    .na {
+        display: none;
+        z-index: 99;
+        position: fixed;
+        animation: none;
+        right: 10px;
+        top: 60px;
+        background-color: #1b1b1bc2;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+       li a{
+        color: #fff200;
+       }
+    }
+    .na.show {
+        display: block;
+    }
+    .Right{
+        margin-right: 30px;
+    }
+    .inroduction{
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .title{
+        all: unset;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+.services{
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    background-color: #222;
+}
+    .service{
+        i{
+            font-size: 20px;
+
+        }
+        h3{
+            font-size: 20px;
+
+        }
+    }
+    .videios-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Allvidios-list{
+        margin: auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .container{
+        width: 90%;
+      
+    }
+}
+
+/* لأجهزة الآيباد فقط */
+
+
+
+
+
+
+
+
+
+  .abservice:hover , .abservice2:hover{
+    transform: translateY(-10px);
+  }
+
+  .active .vid{
+    background: var(--main-color);
+    color: var(--main-color);
+  
+
+  }
+
+  .active .video-title{
+    color: var(--main-color);
+  }
+
+ 
