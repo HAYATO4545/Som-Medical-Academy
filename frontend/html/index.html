@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/frontend/css/loading.css">
+    <link rel="stylesheet" href="/frontend/css/video.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/css/from.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Som Medical Academy</title>
+</head>
+<body>
+
+    
+    <div class="payment">
+   <div class="hidePay">
+         <i class='bx bx-x'></i>
+   </div>
+        <div class="stage1">
+            <h1>Dooro Qaabka lacag Bixinta</h1>
+         <div class="cards">
+               <div class="card">
+                   <div class="image">
+                       <img src="https://i1.wp.com/afrotech.so/wp-content/uploads/2019/04/EVC-PLUS-Logo-01-230x128.png?zoom=1.25&fit=230%2C128&ssl=1" loading="lazy" alt="">
+                   </div>
+                   <button class="evcBtn">Dooro</button>
+               </div>
+               <div class="card">
+                   <div class="image">
+                      <img src="https://www.dahabplus.com/assets/eDahabNewLogo-5eca6565.png" loading="lazy" alt="">
+                   </div>
+                   <button class="edahaBtn">Dooro</button>
+               </div>
+         </div>
+        </div>
+        <div class="stage2-evc">
+          <img src="https://i1.wp.com/afrotech.so/wp-content/uploads/2019/04/EVC-PLUS-Logo-01-230x128.png?zoom=1.25&fit=230%2C128&ssl=1" loading="lazy" alt="">
+          <h1> Kugado </h1> 
+          <h1 id="oldPrice">49.99 $</h1>
+          <h1 id="newPrice">20 $</h1>
+          <h1>Kafaaidayso Qiima Dhimista</h1>
+            <button><a href="tel:*712*619936045*20# ">Gado</a></button>
+        </div>
+        <div class="stage2-edahab">
+            <img src="https://www.dahabplus.com/assets/eDahabNewLogo-5eca6565.png" loading="lazy" alt="">
+     
+            <h1> Kugado </h1> 
+            <h1 id="oldPrice">49.99 $</h1>
+            <h1 id="newPrice">20 $</h1>
+            <h1>Kafaaidayso Qiima Dhimista</h1>
+              <button><a href="tel:*712*629936045*20# ">Gado</a></button>
+          </div>
+
+          <div class="stage3">
+            <h1>soowac nambarkaan </h1>
+            <h1 id="targetNumber"><a href="tel:0619936045"></a>0619936045</h1>
+            <h1>oo usheeg mobile numberkaan</h1>
+            <h1 id="usernumber"></h1>
+          </div>
+          <button id="next">Next</button>
+    </div>
+    <div class="loading">
+        <div class="loader"></div>
+      </div>
+    <div class="registe">
+        <div class="error">
+            <h1 id="error">eror</h1>
+        </div>
+        <div class="from">
+            <div class="title">
+                Sign in 
+            </div>
+            <div class="form">
+                <div class="section">
+                    <h1>username</h1>
+                    <input type="text" placeholder="username" id="user" value="hayato">
+              
+                </div>
+                <div class="section">
+                    <h1>Email</h1>
+                    <input type="text" placeholder="Email" id="email" value="malanmy92@gmail.com">
+                
+                </div>
+                <div class="mobileNumber">
+                    <h1>mobile number</h1>
+         <div class="inputsmobile">
+              <div class="mobileinput">
+                         <input class="numberinput" type="number" placeholder="mobile number" id="phoneNumber" value="0629936045">
+              </div>
+                    
+         </div>
+                </div>
+                <div class="section">
+                    <h1>Password</h1>
+                    <input type="password" placeholder="password" id="password" value="cimraan">
+                 
+                </div>
+             <div class="buttn">
+                   <button id="btn">send</button>
+                   <button id="cnsdign">cansale</button>
+             </div>
+            </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="logerror">
+            <h1 id="errorText"></h1>
+        </div>
+        <div class="from">
+            <div class="title">
+               login
+            </div>
+            <div class="form">
+          
+                <div class="section">
+                    <h1>Email</h1>
+                    <input type="text" placeholder="Email" id="LogEmail">
+          
+                </div>
+            
+                <div class="section">
+                    <h1>Password</h1>
+                    <input type="password" placeholder="password" id="LogPassword">
+             
+                </div>
+             <div class="buttn">
+                   <button class="btn" id="logbtn">send</button>
+                   <button id="cnslog">cansale</button>
+             </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <header id="Home">
+        <div class="Logo">
+            <img src="/frontend/img/logo.png" alt="Logo" loading="lazy">
+            <h1>Som Medical Academy</h1>
+        </div>
+
+        <ul class="na">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Course">Course</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="Auth">
+            <button class="notAouth" id="lognbtn">LogIn</button>
+            <button class="notAouth" id="signbtn">SignIn</button>
+            <span class="isAuth" id="usernamespan">name</span>
+            <button class="isAuth logout"> Logout</button>
+        </div>
+
+        <li class="menue">
+            <i class="fa-solid fa-bars"></i>
+        </li>
+    </header>
+
+    <main>
+        <div class="Left">
+            <div class="text">
+                <h1>Kusoo Dhawow</h1>
+                <h2>Som Medical Academy</h2>
+                <p>Kadhameystiro Aqoonta Kaa Dhiman</p>
+            </div>
+            <div class="social-icons">
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn1" ><i class="fa-solid fa-video"></i> Course</button>
+                <button class="btn2"><i class="fa-solid fa-address-card"></i> services</button>
+            </div>
+        </div>
+        <div class="Right">
+            <img src="/frontend/img/logo.png" alt="Logo" loading="lazy">
+        </div>
+    </main>
+
+    <div class="services" id='services'>
+        <div class="service">
+        <i class="fa-solid fa-video"></i>
+        <h3>Course High Quality</h3>
+        </div>
+        <div class="service">
+        <i class="fa-solid fa-flask"></i>
+        <h3>Higher Education</h3>
+        </div>
+        <div class="service">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24h Customer Servics</h3>
+        </div>
+    </div>
+
+    <div class="inroduction" id='Course'>
+        <div class="title">
+            <h1>Hor Dhac</h1>
+        </div>
+        
+        <div class='videios-section'>
+
+      <div class="Video1">
+              <div class="container show-controls">
+    <video  id="videoPlayerr" controls controlslist="nodownload">
+        <source id="videoSource" src="/frontend/img/videoplayback.mp4">
+    </video>
+              
+              </div>
+              <h1>introduction</h1>
+              <button id='payment'>Fiirso Dhaman Moqalada</button>
+      </div>
+        <div class='Allvidios-list'>
+            <div class='video-loack'>
+
+                <div class='vid'>
+                    <div class='vidicon'>
+                    <i class="fa-solid fa-lock"></i>
+                    </div>
+    
+                </div>
+    
+                <div class='video-title'>
+                    <h1>video1</h1>
+                </div>
+            </div>
+
+            <div class='video-loack'>
+
+                <div class='vid'>
+                    <div class='vidicon'>
+                    <i class="fa-solid fa-lock"></i>
+                    </div>
+    
+                </div>
+    
+                <div class='video-title'>
+                    <h1>video1</h1>
+                </div>
+            </div>
+
+            <div class='video-loack'>
+
+                <div class='vid'>
+                    <div class='vidicon'>
+                    <i class="fa-solid fa-lock"></i>
+                    </div>
+    
+                </div>
+    
+                <div class='video-title'>
+                    <h1>video1</h1>
+                </div>
+            </div>
+
+            <div class='video-loack'>
+
+                <div class='vid'>
+                    <div class='vidicon'>
+                    <i class="fa-solid fa-lock"></i>
+                    </div>
+    
+                </div>
+    
+                <div class='video-title'>
+                    <h1>video1</h1>
+                </div>
+            </div>
+            
+     
+     
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="title">
+       <h1>
+        About Service
+       </h1>
+        </div>
+
+        <div class="aboutServices" >
+            <div class="abservice">
+                <i class="fa-solid fa-flask"></i>
+                <div>
+                    <h3>Casharro Biochemistry</h3>
+                    <p>Baro aasaaska iyo fikradaha sare ee Biochemistry si fudud oo faahfaahsan.</p>
+                </div>
+            </div>
+            <div class="abservice2">
+                <i class="fa-solid fa-dna"></i>
+                <div>
+                    <h3>Aqoonta Falanqaynta</h3>
+                    <p>Ku xooji fahamkaaga sawirro iyo tusaalooyin is-dhexgal ah.</p>
+                </div>
+            </div>
+            <div class="abservice">
+                <i class="fa-solid fa-microscope"></i>
+                <div>
+                    <h3>Fahanka Shaybaarka</h3>
+                    <p>Ka hel khibrad la taaban karo adoo adeegsanaya tusaalooyin.</p>
+                </div>
+            </div>
+            <div class="abservice2">
+                <i class="fa-solid fa-book-open"></i>
+                <div>
+                    <h3>Qoraallo Fudud</h3>
+                    <p>Hel qoraallo kooban oo si fudud loo fahmi karo.</p>
+                </div>
+            </div>
+        </div>
+
+  
+
+    </div>
+
+    <footer style="text-align: center; padding: 10px; background-color: #181818; font-size: 14px;">
+       
+        <h3 style="color: #fff;"> &copy; 2025 Sommedical Academy. All Rights Reserved.</h3>
+    </footer>
+    
+</body>
+<script src="/frontend/js/script.js"></script>
+</html>
