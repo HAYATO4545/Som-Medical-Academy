@@ -10,7 +10,6 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 app.use(express.json())
 app.use(cors())  
-
 mongoose.connect(dbURI)
 .then(()=> {
     app.listen(Port,()=> {
